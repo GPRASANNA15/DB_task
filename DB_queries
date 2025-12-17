@@ -1,0 +1,25 @@
+MONGO DB QUERIES:
+  1.* db.product.find({product_name:"Intelligent Fresh Chips"});
+  *db.product.find({product_price:{$lt:600}});
+  *db.product.find({product_color:"green"});
+  * db.product.find({product_material:"Concrete"});
+
+  2.db.product.find({product_price:{$gt:400,$lt:800}}); 
+  3. db.product.find({product_price:{$not:{$gt:400,$lt:600}}});
+  4. db.product.find({product_price:{$gt:500}});
+  5. db.product.aggregate([{$group:{_id:{product_name:"$product_name",product_material:"$product_material"}}}]);
+  6. db.product.find({_id:ObjectId("69411a542be8a9bbef5b0021")});
+  7. db.product.aggregate([{$group:{_id:{product_name:"$product_name",product_material:"$product_material"}}}]);
+  8. db.product.find({product_material:"Soft"});
+  9.db.product.find({product_color:"indigo",product_price:492});
+  10.db.product.deleteMany({product_price:28});
+
+MYSQL QUERIES:
+ 1.select ename,sal from empl where sal>=2200;
+2.select *from empl where comm IS NULL or  0;
+3.select ename,sal from empl where not sal between 2500 and 4000;
+4.select ename,job,sal from empl where not job="manager";
+5.select * from empl where ename like "___A%";
+6.select * from empl where enmae like "___T%";
+
+  
